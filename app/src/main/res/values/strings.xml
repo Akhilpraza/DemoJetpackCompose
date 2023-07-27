@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WeatherAppication</string>
+    <string name="title_activity_movie_app">MovieAppActivity</string>
+    <string name="title_activity_biz_card">BizCardActivity</string>
+    <string name="title_activity_calculator_app">CalculatorAppActivity</string>
+    <string name="title_activity_intro_to_compose">IntroToComposeActivity</string>
+    <string name="title_activity_basic_composable">BasicComposableActivity</string>
+    <string name="title_activity_basic_compose">BasicComposeActivity</string>
+    <string name="title_activity_basic">BasicActivity</string>
+    <string name="title_activity_lunch">LunchActivity</string>
+</resources>
