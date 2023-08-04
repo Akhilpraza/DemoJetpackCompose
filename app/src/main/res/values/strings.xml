@@ -8,4 +8,8 @@
     <string name="title_activity_basic_compose">BasicComposeActivity</string>
     <string name="title_activity_basic">BasicActivity</string>
     <string name="title_activity_lunch">LunchActivity</string>
+    <string name="about_app">Weather App v.0.1</string>
+    <string name="api_used">Weather API by: https://openweathermap.org</string>
+    <string name="favorite">Favorites Screen</string>
+    <string name="setting">Setting Screen</string>
 </resources>

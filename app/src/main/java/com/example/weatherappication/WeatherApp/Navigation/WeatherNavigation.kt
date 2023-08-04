@@ -2,6 +2,7 @@ package com.example.weatherappication.WeatherApp.Navigation
 
 import android.annotation.SuppressLint
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -9,8 +10,13 @@ import androidx.navigation.compose.rememberNavController
 import com.example.weatherappication.WeatherApp.Main.MainViewModel
 import com.example.weatherappication.WeatherApp.screen.MainScreen
 import com.example.weatherappication.WeatherApp.screen.WeatherSpalshScreen
+import com.example.weatherappication.WeatherApp.screen.about.AboutScreen
+import com.example.weatherappication.WeatherApp.screen.favorites.FavoriteScreen
+import com.example.weatherappication.WeatherApp.screen.search.SearchScreen
+import com.example.weatherappication.WeatherApp.screen.setting.SettingScreen
 
 
+@OptIn(ExperimentalComposeUiApi::class)
 @SuppressLint("SuspiciousIndentation")
 @Composable
 fun WeatherNavigation() {
@@ -21,8 +27,20 @@ fun WeatherNavigation() {
             WeatherSpalshScreen(navController =navController)
         }
         composable(WheatherScreen.MainScreen.name){
-           // val mainViewModel = hiltViewModel<MainViewModel>()
+            val mainViewModel = hiltViewModel<MainViewModel>()
             MainScreen(navController =navController)
+        }
+        composable(WheatherScreen.SearchScreen.name){
+            SearchScreen(navController =navController)
+        }
+        composable(WheatherScreen.AboutScreen.name){
+            AboutScreen(navController =navController)
+        }
+        composable(WheatherScreen.FavoriteScreen.name){
+            FavoriteScreen(navController =navController)
+        }
+        composable(WheatherScreen.SettingScreen.name){
+            SettingScreen(navController =navController)
         }
     }
 }

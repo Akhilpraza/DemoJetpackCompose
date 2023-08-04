@@ -9,20 +9,16 @@ import retrofit2.http.Header
 import retrofit2.http.Headers
 import javax.inject.Inject
 
-//@Headers({
-//    "X-RapidAPI-Key: 214c500f7fmsh4be6737b93bb288p1438d3jsnb641bb86c5b6"
-//    "X-RapidAPI-Host: weatherapi-com.p.rapidapi.com"
-//})
 class WeatherRepository @Inject  constructor(private val api: WeatherApi) {
-    suspend fun getWeather(ForecastQuery: String):DataOrException<Weather,Boolean,Exception>{
-    val response = try {
-        api.getWeather(query = ForecastQuery)
+    suspend fun getWeather():DataOrException<Weather,Boolean,Exception>{
+        val response = try {
+            api.getWeather()
 
-    }
-    catch (e:Exception){
-        Log.d("REX","getWeather : $e"    )
-        return DataOrException(e =e)
-    }
+        }
+        catch (e:Exception){
+            Log.d("REX","getWeather : $e"    )
+            return DataOrException(e =e)
+        }
         Log.d("INSIDE","getWeather : $response" )
         return DataOrException(data = response)
     }
